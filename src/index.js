@@ -3,24 +3,27 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col } from 'react-bootstrap';
+import Top from './Components/Top';
 import Rellax from 'rellax';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* images */}
-    <div class="rellax"  style={{'background-color': 'red', width: 400, height: 400}}>
-      I’m that default chill speed of "-2"
-    </div>
+    <Container fluid className="rellax my-5">
+      <Top />
+    </Container>
 
     {/* black box */}
-    <div class="rellax" data-rellax-speed="7" style={{'background-color': 'blue', width: 400, height: 400}}>
+    <Container fluid className="rellax my-5" data-rellax-speed="7" style={{'background-color': 'black', width: '100%', height: 400}}>
       I’m super fast!!
-    </div>
+    </Container>
 
     {/* more images */}
-    <div class="rellax" data-rellax-speed="-4" style={{'background-color': 'green', width: 400, height: 400}}>
+    <Container fluid className="rellax" data-rellax-speed="-4" style={{'background-color': 'green', width: 400, height: 400}}>
       I’m extra slow and smooth
-    </div>
+    </Container>
   </React.StrictMode>,
   document.getElementById('root')
 );
