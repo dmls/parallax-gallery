@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import Top from './Components/Top';
+import Bottom from './Components/Bottom';
 import Rellax from 'rellax';
 
 ReactDOM.render(
@@ -23,8 +24,8 @@ ReactDOM.render(
     </Container>
 
     {/* more images */}
-    <Container fluid className="rellax" data-rellax-speed="-4" style={{'background-color': 'green', width: 400, height: 400}}>
-      I’m extra slow and smooth
+    <Container fluid className="rellax" data-rellax-speed="3">
+      <Bottom />
     </Container>
   </React.StrictMode>,
   document.getElementById('root')
