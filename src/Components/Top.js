@@ -1,54 +1,45 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-
+import SideImg from './SideImg';
+import GalleryRows from './GalleryRows';
 
 class Top extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.items = [{
+            image: 'http://placeimg.com/700/900/fashion',
+            url: '#'
+        }, {
+            image: 'http://placeimg.com/700/900/fashion',
+            url: '#'
+        }, {
+            image: 'http://placeimg.com/700/900/fashion',
+            url: '#'
+        }, {
+            image: 'http://placeimg.com/700/900/fashion',
+            url: '#'
+        }];
+    }
+
     render() {
         return (
             <Row>
                 {/* Left image */}
-                <Col 
-                    sm={0}
-                    md={2}
-                >
-                    <img src="https://placehold.it/200x600" />
-                </Col>
+                <SideImg img='https://placehold.it/200x600' />
 
                 {/* Center grid */}
                 <Col
                     sm={12}
-                    md={8}
+                    md={10}
+                    lg={8}
+                    className="text-center"
                 >
-                    {/* First row */}
-                    <Row className="my-3">
-                        <Col>
-                            <img src="https://placehold.it/400x500" />
-                        </Col>
-
-                        <Col>
-                            <img src="https://placehold.it/400x500" />
-                        </Col>
-                    </Row>
-
-                    {/* Second Row */}
-                    <Row className="my-3">
-                        <Col>
-                            <img src="https://placehold.it/400x500" />
-                        </Col>
-                        
-                        <Col>
-                            <img src="https://placehold.it/400x500" />
-                        </Col>
-                    </Row>
+                    <GalleryRows cols={2} items={this.items} />
                 </Col>
 
                 {/* Right image */}
-                <Col 
-                    sm={0}
-                    md={2}
-                >
-                    <img src="https://placehold.it/200x600" />
-                </Col>
+                <SideImg img='https://placehold.it/200x600' />
             </Row>
         );
     }

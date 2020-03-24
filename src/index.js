@@ -11,12 +11,14 @@ import Rellax from 'rellax';
 ReactDOM.render(
   <React.StrictMode>
     {/* images */}
-    <Container fluid className="rellax my-5">
+    <Container fluid className="rellax my-5 pb-5" data-rellax-speed="1">
       <Top />
     </Container>
 
+    <div className="py-4" />
+
     {/* black box */}
-    <Container fluid className="rellax my-5" data-rellax-speed="7" style={{'background-color': 'black', width: '100%', height: 400}}>
+    <Container fluid className="rellax my-5 pt-5" data-rellax-speed="4" style={{'background-color': 'black', width: '100%', height: 400}}>
       I’m super fast!!
     </Container>
 
