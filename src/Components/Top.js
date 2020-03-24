@@ -26,7 +26,7 @@ class Top extends React.Component {
         return (
             <Row>
                 {/* Left image */}
-                <SideImg img='https://placehold.it/200x600' />
+                <SideImg img='https://placehold.it/200x900' />
 
                 {/* Center grid */}
                 <Col
@@ -39,7 +39,7 @@ class Top extends React.Component {
                 </Col>
 
                 {/* Right image */}
-                <SideImg img='https://placehold.it/200x600' />
+                <SideImg img='https://placehold.it/200x900' />
             </Row>
         );
     }
