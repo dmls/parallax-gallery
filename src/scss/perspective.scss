@@ -1,0 +1,8 @@
+.perspective {
+    top: -8rem;
+    perspective: 1000px;
+
+    div {
+        transform: rotateX(10deg);
+    }
+}

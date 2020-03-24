@@ -9,7 +9,7 @@ class SideImg extends React.Component {
                 lg={2}
                 className="align-self-center d-none d-md-block" 
             >
-                <img className="img-fluid mx-auto d-block" src={this.props.img} />
+                <img className="img-fluid mx-auto d-block" src={this.props.src} alt={this.props.alt} />
             </Col>
         )
     }

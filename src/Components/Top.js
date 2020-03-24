@@ -8,16 +8,16 @@ class Top extends React.Component {
         super(props);
 
         this.items = [{
-            image: 'http://placeimg.com/700/900/fashion',
+            image: 'http://placeimg.com/700/1300/fashion',
             url: '#'
         }, {
-            image: 'http://placeimg.com/700/900/fashion',
+            image: 'http://placeimg.com/700/1300/fashion',
             url: '#'
         }, {
-            image: 'http://placeimg.com/700/900/fashion',
+            image: 'http://placeimg.com/700/1300/fashion',
             url: '#'
         }, {
-            image: 'http://placeimg.com/700/900/fashion',
+            image: 'http://placeimg.com/700/1300/fashion',
             url: '#'
         }];
     }
@@ -26,7 +26,7 @@ class Top extends React.Component {
         return (
             <Row>
                 {/* Left image */}
-                <SideImg img='https://placehold.it/200x900' />
+                <SideImg src='https://placehold.it/200x900' alt="Side Text" />
 
                 {/* Center grid */}
                 <Col
@@ -35,11 +35,21 @@ class Top extends React.Component {
                     lg={8}
                     className="text-center"
                 >
-                    <GalleryRows cols={2} items={this.items} />
+                    <Row>
+                        <Col
+                            xs={10}
+                            className="perspective mx-auto"
+                        >
+                            <GalleryRows 
+                                cols={2} 
+                                items={this.items}
+                            />
+                        </Col>
+                    </Row>
                 </Col>
 
                 {/* Right image */}
-                <SideImg img='https://placehold.it/200x900' />
+                <SideImg src='https://placehold.it/200x900' alt="Side Text" />
             </Row>
         );
     }

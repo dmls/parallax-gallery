@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col } from 'react-bootstrap';
+import './js/orientation-parallax';
+import { Container } from 'react-bootstrap';
 import Top from './Components/Top';
 import Bottom from './Components/Bottom';
 import Rellax from 'rellax';
@@ -31,7 +31,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-var rellax = new Rellax('.rellax');
+new Rellax('.rellax');
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
