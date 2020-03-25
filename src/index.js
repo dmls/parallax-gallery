@@ -7,6 +7,7 @@ import './js/orientation-parallax';
 import { Container, Col } from 'react-bootstrap';
 import Top from './Components/Top';
 import Bottom from './Components/Bottom';
+import Bottom2 from './Components/Bottom2';
 import Rellax from 'rellax';
 
 window.isMobile = window.innerWidth > 992
@@ -23,13 +24,25 @@ ReactDOM.render(
     {/* black box */}
     <Container fluid className="rellax my-5 pt-5" data-rellax-speed="4" style={{'background-color': 'black', height: 400}}>
       <Col className="text-white">
-        I’m super fast!!
+        Divider
       </Col>
     </Container>
 
     {/* more images */}
     <Container fluid className="rellax" data-rellax-speed="3">
       <Bottom />
+    </Container>
+
+    {/* black box */}
+    <Container fluid className="rellax my-5 pt-5" data-rellax-speed="4" style={{'background-color': 'black', height: 400}}>
+      <Col className="text-white">
+        Divider
+      </Col>
+    </Container>
+
+    {/* more images */}
+    <Container fluid className="rellax" data-rellax-speed="3">
+      <Bottom2 />
     </Container>
   </React.StrictMode>,
   document.getElementById('root')
