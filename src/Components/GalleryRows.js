@@ -38,6 +38,7 @@ class GalleryRows extends React.Component {
                 key={index}
                 xs={12}
                 sm={this.colWidth}
+                className={index % 2 ? '' : 'mt-4'}
             >
                 {this.getLink(item)}
             </Col>
