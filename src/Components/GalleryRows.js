@@ -21,7 +21,7 @@ class GalleryRows extends React.Component {
     }
 
     getLink(item) {
-        if (this.props.parallaxItems === true) {
+        if (this.props.parallaxItems === true && window.isMobile) {
             return (                
                 <Tilt className="Tilt" options={{scale: 1}}>
                     {this.getLinkContent(item)}

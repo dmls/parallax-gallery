@@ -4,10 +4,12 @@ import * as serviceWorker from './serviceWorker';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './js/orientation-parallax';
-import { Container } from 'react-bootstrap';
+import { Container, Col } from 'react-bootstrap';
 import Top from './Components/Top';
 import Bottom from './Components/Bottom';
 import Rellax from 'rellax';
+
+window.isMobile = window.innerWidth > 992
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,11 +18,13 @@ ReactDOM.render(
       <Top />
     </Container>
 
-    <div className="py-4" />
+    <div className="py-5" />
 
     {/* black box */}
-    <Container fluid className="rellax my-5 pt-5" data-rellax-speed="4" style={{'background-color': 'black', width: '100%', height: 400}}>
-      I’m super fast!!
+    <Container fluid className="rellax my-5 pt-5" data-rellax-speed="4" style={{'background-color': 'black', height: 400}}>
+      <Col className="text-white">
+        I’m super fast!!
+      </Col>
     </Container>
 
     {/* more images */}

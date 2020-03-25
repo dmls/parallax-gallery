@@ -33,7 +33,7 @@ class Top extends React.Component {
                     sm={12}
                     md={10}
                     lg={8}
-                    className="text-center"
+                    className="text-center orientation-parallax"
                 >
                     <Row>
                         <Col
