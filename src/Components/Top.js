@@ -43,6 +43,7 @@ class Top extends React.Component {
                             <GalleryRows 
                                 cols={2} 
                                 items={this.items}
+                                parallaxItems={true}
                             />
                         </Col>
                     </Row>

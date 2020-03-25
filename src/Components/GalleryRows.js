@@ -12,25 +12,34 @@ class GalleryRows extends React.Component {
         this.colWidth = 12 / this.props.cols;
     }
 
+    getLinkContent(item) {
+        return (
+            <a href={item.url}>
+                <img className="img-fluid mb-4" src={item.image} alt="Gallery element" />
+            </a>
+        )
+    }
+
+    getLink(item) {
+        if (this.props.parallaxItems === true) {
+            return (                
+                <Tilt className="Tilt" options={{scale: 1}}>
+                    {this.getLinkContent(item)}
+                </Tilt>
+            )
+        }
+
+        return this.getLinkContent(item);
+    }
+
     getCol(item, index) {
         return (
             <Col 
                 key={index}
                 xs={12}
                 sm={this.colWidth}
-                data-tilt
-                className={
-                    (this.props.parallaxItems === true ? 'orientation-parallax' : '') + 
-                    (this.props.parallaxItems === true && index % 2 === 0 ? ' pt-5' : '')
-                }
             >
-                {/* <div data-depth="0.5"> */}
-                <Tilt className="Tilt" options={{scale: 1}}>
-                    <a href={item.url}>
-                        <img className="img-fluid mb-4" src={item.image} alt="Gallery element" />
-                    </a>
-                </Tilt>
-                {/* </div> */}
+                {this.getLink(item)}
             </Col>
         )
     }
