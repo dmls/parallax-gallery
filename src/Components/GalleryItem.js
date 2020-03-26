@@ -1,9 +1,9 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
 import Tilt from 'react-tilt';
-import handleViewport from 'react-in-viewport';
+import TrackVisibility from 'react-on-screen';
 
-class GalleryItemComponent extends React.Component {
+class GalleryItemContent extends React.Component {
     constructor(props) {
         super(props);
         
@@ -25,9 +25,9 @@ class GalleryItemComponent extends React.Component {
     }
 
     getStyle() {
-        const {inViewport} = this.props;
-        if (inViewport) {
-            return {transform: 'rotate(0)'};
+        const {isVisible} = this.props;
+        if (isVisible) {
+            return {transform: 'rotateY(5deg)'};
         }
 
         return {transform: 'rotateY(' + this.state.zScrollRotate + ')'};
@@ -68,7 +68,7 @@ class GalleryItemComponent extends React.Component {
             <Col 
             key={this.props.index}
             xs={12}
-            sm={this.props.colWidth}
+            sm={12}
             className={(this.props.index % 2 ? '' : 'mt-4') + (this.props.zScrollTilt ? ' zScrollTilt' : '')}
             >
                 {this.getContent()}
@@ -77,6 +77,18 @@ class GalleryItemComponent extends React.Component {
     }
 }
 
-const GalleryItem = handleViewport(GalleryItemComponent);
+class GalleryItem extends React.Component {
+    render() {
+        return (
+            <TrackVisibility className={'col-12 col-sm-' + this.props.colWidth}>
+                <GalleryItemContent
+                item={this.props.item}
+                index={this.props.index}
+                zScrollTilt={this.props.zScrollTilt}
+                />
+            </TrackVisibility>
+        )
+    }
+}
 
 export default GalleryItem

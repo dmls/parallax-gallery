@@ -8,16 +8,16 @@ class Bottom extends React.Component {
         super(props);
 
         this.items = [{
-            image: 'http://placeimg.com/700/1300/people',
+            image: 'http://placeimg.com/700/1000/people',
             url: '#'
         }, {
-            image: 'http://placeimg.com/700/1300/tech',
+            image: 'http://placeimg.com/700/1000/tech',
             url: '#'
         }, {
-            image: 'http://placeimg.com/700/1300/nature',
+            image: 'http://placeimg.com/700/1000/nature',
             url: '#'
         }, {
-            image: 'http://placeimg.com/700/1300/animals',
+            image: 'http://placeimg.com/700/1000/animals',
             url: '#'
         }];
     }

@@ -3,10 +3,5 @@
 }
 
 .zScrollTilt-child {
-    transition: 2s; 
-    // transform: rotateY(40deg);
-
-    &.active {
-        transform: rotateY(0) !important;
-    }
+    transition: 1s; 
 }
