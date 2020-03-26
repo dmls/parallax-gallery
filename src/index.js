@@ -22,11 +22,11 @@ ReactDOM.render(
     <div className="py-5" />
 
     {/* black box */}
-    {/* <Container fluid className="rellax my-5 pt-5" data-rellax-speed="4" style={{'background-color': 'black', height: 400}}>
+    <Container fluid className="rellax my-5 pt-5" data-rellax-speed="4" style={{'background-color': 'black', height: 400}}>
       <Col className="text-white">
         Divider
       </Col>
-    </Container> */}
+    </Container>
 
     {/* more images */}
     <Container fluid className="rellax" data-rellax-speed="3">

@@ -80,7 +80,7 @@ class GalleryItemContent extends React.Component {
 class GalleryItem extends React.Component {
     render() {
         return (
-            <TrackVisibility className={'col-12 col-sm-' + this.props.colWidth}>
+            <TrackVisibility offset={250} className={'col-12 col-sm-' + this.props.colWidth}>
                 <GalleryItemContent
                 item={this.props.item}
                 index={this.props.index}
