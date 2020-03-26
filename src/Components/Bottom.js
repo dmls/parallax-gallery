@@ -30,12 +30,16 @@ class Bottom extends React.Component {
 
                 {/* Center grid */}
                 <Col
-                    sm={12}
-                    md={10}
-                    lg={8}
-                    className="text-center"
+                sm={12}
+                md={10}
+                lg={8}
+                className="text-center"
                 >
-                    <GalleryRows cols={2} items={this.items} zScrollTilt={true} />
+                    <GalleryRows 
+                    cols={2} 
+                    items={this.items} 
+                    zScrollTilt={true} 
+                    />
                 </Col>
 
                 {/* Right image */}
