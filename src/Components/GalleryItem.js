@@ -25,6 +25,10 @@ class GalleryItemContent extends React.Component {
     }
 
     getStyle() {
+        if (!this.props.zScrollTilt) {
+            return;
+        }
+
         const {isVisible} = this.props;
         if (isVisible) {
             return {transform: 'rotateY(5deg)'};
@@ -40,7 +44,7 @@ class GalleryItemContent extends React.Component {
         if (this.props.parallaxItems === true && window.isMobile) {
             this.content = (                
                 <Tilt 
-                className={'Tilt' + zScrollClass} 
+                className={'Tilt'} 
                 options={{scale: 1}}
                 style={style}
                 >
@@ -85,6 +89,7 @@ class GalleryItem extends React.Component {
                 item={this.props.item}
                 index={this.props.index}
                 zScrollTilt={this.props.zScrollTilt}
+                parallaxItems={this.props.parallaxItems}
                 />
             </TrackVisibility>
         )

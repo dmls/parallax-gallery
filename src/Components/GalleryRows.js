@@ -21,6 +21,7 @@ class GalleryRows extends React.Component {
                             item={item}
                             index={index}
                             colWidth={self.colWidth}
+                            parallaxItems={self.props.parallaxItems}
                             zScrollTilt={self.props.zScrollTilt}
                             />
                         )

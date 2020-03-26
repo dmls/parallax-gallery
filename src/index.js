@@ -24,7 +24,6 @@ ReactDOM.render(
     {/* black box */}
     <Container fluid className="rellax my-5 pt-5" data-rellax-speed="4" style={{'background-color': 'black', height: 400}}>
       <Col className="text-white">
-        Divider
       </Col>
     </Container>
 
@@ -36,7 +35,6 @@ ReactDOM.render(
     {/* black box */}
     {/* <Container fluid className="rellax my-5 pt-5" data-rellax-speed="4" style={{'background-color': 'black', height: 400}}>
       <Col className="text-white">
-        Divider
       </Col>
     </Container> */}
 
