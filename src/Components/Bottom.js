@@ -8,16 +8,16 @@ class Bottom extends React.Component {
         super(props);
 
         this.items = [{
-            image: 'http://placeimg.com/700/1300/people',
+            image: 'http://placeimg.com/700/1000/people',
             url: '#'
         }, {
-            image: 'http://placeimg.com/700/1300/tech',
+            image: 'http://placeimg.com/700/1000/tech',
             url: '#'
         }, {
-            image: 'http://placeimg.com/700/1300/nature',
+            image: 'http://placeimg.com/700/1000/nature',
             url: '#'
         }, {
-            image: 'http://placeimg.com/700/1300/animals',
+            image: 'http://placeimg.com/700/1000/animals',
             url: '#'
         }];
     }
@@ -30,12 +30,16 @@ class Bottom extends React.Component {
 
                 {/* Center grid */}
                 <Col
-                    sm={12}
-                    md={10}
-                    lg={8}
-                    className="text-center"
+                sm={12}
+                md={10}
+                lg={8}
+                className="text-center"
                 >
-                    <GalleryRows cols={2} items={this.items} zScrollTilt={true} />
+                    <GalleryRows 
+                    cols={2} 
+                    items={this.items} 
+                    zScrollTilt={true} 
+                    />
                 </Col>
 
                 {/* Right image */}
