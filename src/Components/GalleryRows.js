@@ -23,13 +23,17 @@ class GalleryRows extends React.Component {
     getLink(item) {
         if (this.props.parallaxItems === true && window.isMobile) {
             return (                
-                <Tilt className="Tilt" options={{scale: 1}}>
+                <Tilt className={'Tilt' + (this.props.zScrollTilt ? ' zScrollTilt-child' : '')} options={{scale: 1}}>
                     {this.getLinkContent(item)}
                 </Tilt>
             )
         }
 
-        return this.getLinkContent(item);
+        return (
+            <div className={this.props.zScrollTilt ? 'zScrollTilt-child' : ''}>
+                {this.getLinkContent(item)}
+            </div>
+        )
     }
 
     getCol(item, index) {
@@ -38,7 +42,7 @@ class GalleryRows extends React.Component {
                 key={index}
                 xs={12}
                 sm={this.colWidth}
-                className={index % 2 ? '' : 'mt-4'}
+                className={(index % 2 ? '' : 'mt-4') + (this.props.zScrollTilt ? ' zScrollTilt' : '')}
             >
                 {this.getLink(item)}
             </Col>

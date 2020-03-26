@@ -35,7 +35,7 @@ class Bottom extends React.Component {
                     lg={8}
                     className="text-center"
                 >
-                    <GalleryRows cols={2} items={this.items} />
+                    <GalleryRows cols={2} items={this.items} zScrollTilt={true} />
                 </Col>
 
                 {/* Right image */}
