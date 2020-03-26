@@ -20,17 +20,27 @@ class GalleryRows extends React.Component {
         )
     }
 
-    getLink(item) {
+    getLink(item, index) {
+        let zScrollClass = this.props.zScrollTilt ? ' zScrollTilt-child' : '';
+        let zScrollRotate = index % 2 ? '-30deg' : '30deg';
+
         if (this.props.parallaxItems === true && window.isMobile) {
             return (                
-                <Tilt className={'Tilt' + (this.props.zScrollTilt ? ' zScrollTilt-child' : '')} options={{scale: 1}}>
+                <Tilt 
+                className={'Tilt' + zScrollClass} 
+                options={{scale: 1}}
+                style={zScrollClass !== '' ? {transform: 'rotateY(' + zScrollRotate + ')'} : ''}
+                >
                     {this.getLinkContent(item)}
                 </Tilt>
             )
         }
 
         return (
-            <div className={this.props.zScrollTilt ? 'zScrollTilt-child' : ''}>
+            <div 
+            className={zScrollClass}
+            style={zScrollClass !== '' ? {transform: 'rotateY(' + zScrollRotate + ')'} : ''}
+            >
                 {this.getLinkContent(item)}
             </div>
         )
@@ -44,7 +54,7 @@ class GalleryRows extends React.Component {
                 sm={this.colWidth}
                 className={(index % 2 ? '' : 'mt-4') + (this.props.zScrollTilt ? ' zScrollTilt' : '')}
             >
-                {this.getLink(item)}
+                {this.getLink(item, index)}
             </Col>
         )
     }
