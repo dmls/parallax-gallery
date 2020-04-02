@@ -15,9 +15,9 @@ window.isMobile = window.innerWidth > 992
 ReactDOM.render(
   <React.StrictMode>
     {/* images */}
-    {/* <Container fluid className="rellax my-5 pb-5" data-rellax-speed="1">
+    <Container fluid className="rellax my-5 pb-5" data-rellax-speed="1">
       <Top />
-    </Container> */}
+    </Container>
 
     <div className="py-5" />
 
@@ -28,20 +28,20 @@ ReactDOM.render(
     </Container>
 
     {/* more images */}
-    <Container fluid className="rellax" data-rellax-speed="3">
+    <Container fluid className="rellax" data-rellax-speed="6">
       <Bottom />
     </Container>
 
     {/* black box */}
-    {/* <Container fluid className="rellax my-5 pt-5" data-rellax-speed="4" style={{'background-color': 'black', height: 400}}>
+    <Container fluid className="rellax my-5 pt-5" data-rellax-speed="3.5" style={{'background-color': 'black', height: 400}}>
       <Col className="text-white">
       </Col>
-    </Container> */}
+    </Container>
 
     {/* more images */}
-    {/* <Container fluid className="rellax" data-rellax-speed="3">
+    <Container fluid className="rellax" data-rellax-speed="6">
       <Bottom2 />
-    </Container> */}
+    </Container>
   </React.StrictMode>,
   document.getElementById('root')
 );

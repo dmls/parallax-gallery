@@ -23,6 +23,7 @@ class GalleryRows extends React.Component {
                             colWidth={self.colWidth}
                             parallaxItems={self.props.parallaxItems}
                             zScrollTilt={self.props.zScrollTilt}
+                            rotate={self.props.rotate}
                             />
                         )
                     })

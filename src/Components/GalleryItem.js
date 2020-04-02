@@ -8,7 +8,8 @@ class GalleryItemContent extends React.Component {
         super(props);
         
         this.state = {
-            zScrollRotate: this.props.index % 2 ? '-30deg' : '30deg'
+            zScrollTilt: this.props.index % 3 ? '-30deg' : '30deg',
+            rotate: this.props.rotate == true ? window.randomInRange(-4, 4) : null
         }
         this.content = null;
 
@@ -34,7 +35,7 @@ class GalleryItemContent extends React.Component {
             return {transform: 'rotateY(5deg)'};
         }
 
-        return {transform: 'rotateY(' + this.state.zScrollRotate + ')'};
+        return {transform: 'rotateY(' + this.state.zScrollTilt + ')'};
     }
 
     getContent() {
@@ -74,6 +75,7 @@ class GalleryItemContent extends React.Component {
             xs={12}
             sm={12}
             className={(this.props.index % 2 ? '' : 'mt-4') + (this.props.zScrollTilt ? ' zScrollTilt' : '')}
+            style={this.state.rotate ? {transform: 'rotate(' + this.state.rotate + 'deg)'} : {}}
             >
                 {this.getContent()}
             </Col>
@@ -90,6 +92,7 @@ class GalleryItem extends React.Component {
                 index={this.props.index}
                 zScrollTilt={this.props.zScrollTilt}
                 parallaxItems={this.props.parallaxItems}
+                rotate={this.props.rotate}
                 />
             </TrackVisibility>
         )

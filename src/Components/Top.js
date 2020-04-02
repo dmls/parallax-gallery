@@ -9,17 +9,17 @@ class Top extends React.Component {
         super(props);
 
         this.items = [{
-            image: 'http://placeimg.com/700/1300/people',
-            url: '#'
+            image: 'http://placeimg.com/700/1300/architecture',
+            url: ''
         }, {
             image: 'http://placeimg.com/700/1300/tech',
-            url: '#'
+            url: ''
         }, {
             image: 'http://placeimg.com/700/1300/nature',
-            url: '#'
+            url: ''
         }, {
             image: 'http://placeimg.com/700/1300/animals',
-            url: '#'
+            url: ''
         }];
     }
 

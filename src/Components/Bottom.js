@@ -8,17 +8,17 @@ class Bottom extends React.Component {
         super(props);
 
         this.items = [{
-            image: 'http://placeimg.com/700/1000/people',
-            url: '#'
+            image: 'http://placeimg.com/700/1000/architecture',
+            url: ''
         }, {
             image: 'http://placeimg.com/700/1000/tech',
-            url: '#'
+            url: ''
         }, {
             image: 'http://placeimg.com/700/1000/nature',
-            url: '#'
+            url: ''
         }, {
             image: 'http://placeimg.com/700/1000/animals',
-            url: '#'
+            url: ''
         }];
     }
 
@@ -39,6 +39,7 @@ class Bottom extends React.Component {
                     cols={2} 
                     items={this.items} 
                     zScrollTilt={true} 
+                    // rotate={true}
                     />
                 </Col>
 
