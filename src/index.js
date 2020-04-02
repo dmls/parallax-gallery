@@ -28,7 +28,7 @@ ReactDOM.render(
     </Container>
 
     {/* more images */}
-    <Container fluid className="rellax" data-rellax-speed="6">
+    <Container fluid className="rellax" data-rellax-speed="3">
       <Bottom />
     </Container>
 
@@ -39,7 +39,7 @@ ReactDOM.render(
     </Container>
 
     {/* more images */}
-    <Container fluid className="rellax" data-rellax-speed="6">
+    <Container fluid className="rellax" data-rellax-speed="2">
       <Bottom2 />
     </Container>
   </React.StrictMode>,
