@@ -74,7 +74,8 @@ class GalleryItemContent extends React.Component {
             key={this.props.index}
             xs={12}
             sm={12}
-            className={(this.props.index % 2 ? '' : 'mt-4') + (this.props.zScrollTilt ? ' zScrollTilt' : '')}
+            className={(this.props.index % 2 ? '' : 'mt-4') + 
+            (this.props.zScrollTilt ? ' zScrollTilt' : '')}
             style={this.state.rotate ? {transform: 'rotate(' + this.state.rotate + 'deg)'} : {}}
             >
                 {this.getContent()}
