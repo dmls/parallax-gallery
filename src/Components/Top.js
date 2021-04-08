@@ -27,7 +27,7 @@ class Top extends React.Component {
         return (
             <Row>
                 {/* Left image */}
-                <SideImg src='https://placehold.it/200x900' alt="Side Text" />
+                <SideImg src='http://placehold.it/200x900' alt="Side Text" />
 
                 {/* Center grid */}
                 <Col
@@ -54,7 +54,7 @@ class Top extends React.Component {
                 </Col>
 
                 {/* Right image */}
-                <SideImg src='https://placehold.it/200x900' alt="Side Text" />
+                <SideImg src='http://placehold.it/200x900' alt="Side Text" />
             </Row>
         );
     }
