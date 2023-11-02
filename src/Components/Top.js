@@ -9,16 +9,16 @@ class Top extends React.Component {
         super(props);
 
         this.items = [{
-            image: 'http://placeimg.com/700/1300/architecture',
+            image: 'https://picsum.photos/700/1000',
             url: ''
         }, {
-            image: 'http://placeimg.com/700/1300/tech',
+            image: 'https://picsum.photos/700/1000',
             url: ''
         }, {
-            image: 'http://placeimg.com/700/1300/nature',
+            image: 'https://picsum.photos/700/1000',
             url: ''
         }, {
-            image: 'http://placeimg.com/700/1300/animals',
+            image: 'https://picsum.photos/700/1000',
             url: ''
         }];
     }
@@ -27,7 +27,7 @@ class Top extends React.Component {
         return (
             <Row>
                 {/* Left image */}
-                <SideImg src='http://placehold.it/200x900' alt="Side Text" />
+                <SideImg src='https://placehold.co/200x900' alt="Side Text" />
 
                 {/* Center grid */}
                 <Col
@@ -54,7 +54,7 @@ class Top extends React.Component {
                 </Col>
 
                 {/* Right image */}
-                <SideImg src='http://placehold.it/200x900' alt="Side Text" />
+                <SideImg src='https://placehold.co/200x900' alt="Side Text" />
             </Row>
         );
     }
